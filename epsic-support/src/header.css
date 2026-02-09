@@ -1,0 +1,43 @@
+/* Header.css - Style spécifique pour l'en-tête */
+
+header {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0; /* Bordure fine et discrète */
+  margin-bottom: 40px;
+}
+
+header img {
+  height: 70px; /* Taille contrôlée du logo */
+  width: auto;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+.subtitle {
+  color: #003f87; /* Bleu EPSIC */
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0 0 25px 0;
+}
+
+header button {
+  background-color: #003f87;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 4px; /* Arrondi léger (Flat design) */
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+header button:hover {
+  background-color: #002a5c; /* Bleu plus foncé au survol */
+}
