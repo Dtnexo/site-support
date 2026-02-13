@@ -1,0 +1,85 @@
+/* Confirmpopup.css */
+
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.confirm-modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3cd;
+  border-radius: 50%;
+}
+
+.confirm-icon svg {
+  font-size: 28px;
+  color: #856404;
+}
+
+.confirm-title {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.confirm-message {
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.confirm-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.confirm-btn {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirm-btn.cancel {
+  background: #e5e5e5;
+  color: #333;
+}
+
+.confirm-btn.cancel:hover {
+  background: #d5d5d5;
+}
+
+.confirm-btn.delete {
+  background: #dc3545;
+  color: #fff;
+}
+
+.confirm-btn.delete:hover {
+  background: #c82333;
+}

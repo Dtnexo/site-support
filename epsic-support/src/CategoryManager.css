@@ -1,0 +1,97 @@
+/* CategoryManager.css */
+
+.category-modal {
+  max-width: 450px;
+}
+
+.category-manager-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add-category-form {
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #ccc;
+}
+
+.input-with-button {
+  display: flex;
+  gap: 10px;
+}
+
+.input-with-button input {
+  flex: 1;
+}
+
+.add-category-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.add-category-btn:hover {
+  background-color: #218838;
+}
+
+.categories-list h3 {
+  margin-bottom: 15px;
+  color: #003f87;
+  font-size: 1rem;
+}
+
+.categories-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  transition: background-color 0.2s;
+}
+
+.category-item:hover {
+  background: #e9ecef;
+}
+
+.category-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.delete-category-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+  color: #666;
+}
+
+.delete-category-btn:hover {
+  color: #dc3545;
+}
+
+.no-categories {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 20px;
+}

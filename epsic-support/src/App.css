@@ -105,3 +105,95 @@ body {
     grid-template-columns: 1fr; /* Une seule colonne sur mobile */
   }
 }
+
+/* App.css */
+
+/* Important : permet de positionner le bouton par rapport à la carte */
+.card-link {
+  position: relative;
+  /* ... tes autres styles de carte ... */
+}
+
+/* Le style du bouton Edit */
+.edit-btn {
+  position: absolute;
+   top: 10px;
+  right: 45px; 
+  
+  /* Forme ronde et blanche */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  
+  /* Centrage de l'icône */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Couleur de l'icône */
+  color: #555;
+  cursor: pointer;
+  
+  /* Ombre pour le relief */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  /* Animation */
+  opacity: 0; /* Caché par défaut */
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+  z-index: 10; /* Pour être au-dessus du lien */
+}
+
+/* Quand on survole LA CARTE, on affiche le bouton */
+.card-link:hover .edit-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Quand on survole LE BOUTON lui-même */
+.edit-btn:hover {
+  background-color: #003f87; /* Bleu EPSIC */
+  color: white;
+  border-color: #003f87;
+  transform: scale(1.1); /* Petit effet de grossissement */
+}
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  color: #dc3545; /* Rouge */
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: all 0.2s ease-in-out;
+  z-index: 10;
+}
+
+/* Afficher les deux boutons au survol de la carte */
+.card-link:hover .delete-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Effet au survol du bouton supprimer */
+.delete-btn:hover {
+  background-color: #dc3545;
+  color: white;
+  border-color: #dc3545;
+  transform: scale(1.1);
+}

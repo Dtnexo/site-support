@@ -1,0 +1,93 @@
+/* FileAccessPopup.css */
+
+.file-access-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.file-access-modal {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.file-access-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff3cd;
+  border-radius: 50%;
+}
+
+.file-access-icon svg {
+  font-size: 28px;
+  color: #856404;
+}
+
+.file-access-title {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.file-access-message {
+  margin: 0 0 24px;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.file-access-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.file-access-btn {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.file-access-btn.dismiss {
+  background: #e5e5e5;
+  color: #333;
+}
+
+.file-access-btn.dismiss:hover {
+  background: #d5d5d5;
+}
+
+.file-access-btn.connect {
+  background: #856404;
+  color: #fff;
+}
+
+.file-access-btn.connect:hover {
+  background: #6d5203;
+}
+
+.file-access-btn.connect svg {
+  color: #ffc107;
+}
