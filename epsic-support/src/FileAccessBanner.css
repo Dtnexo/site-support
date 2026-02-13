@@ -1,0 +1,136 @@
+/* FileAccessBanner.css */
+
+.file-access-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+  border-bottom: 2px solid #ffc107;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1500;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.banner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 193, 7, 0.3);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.banner-icon svg {
+  font-size: 18px;
+  color: #856404;
+}
+
+.banner-text {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #856404;
+  line-height: 1.4;
+}
+
+.banner-text strong {
+  font-weight: 600;
+}
+
+.banner-btn-connect {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: #856404;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.banner-btn-connect:hover {
+  background: #6d5203;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(133, 100, 4, 0.3);
+}
+
+.banner-btn-connect svg {
+  color: #ffc107;
+}
+
+.banner-btn-close {
+  padding: 6px;
+  background: transparent;
+  border: none;
+  color: #856404;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.banner-btn-close:hover {
+  background: rgba(133, 100, 4, 0.1);
+  color: #6d5203;
+}
+
+.banner-btn-close svg {
+  font-size: 16px;
+}
+
+/* Ajustement pour le contenu de la page */
+body:has(.file-access-banner) .main-container {
+  margin-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .banner-content {
+    flex-wrap: wrap;
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  .banner-text {
+    flex-basis: 100%;
+    text-align: center;
+    order: -1;
+  }
+
+  .banner-icon {
+    order: -2;
+  }
+
+  .banner-btn-connect {
+    flex: 1;
+  }
+}

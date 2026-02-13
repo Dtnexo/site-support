@@ -9,6 +9,7 @@ import CategoryManager from './CategoryManager.jsx'
 import FlashMessage from './FlashMessage.jsx'
 import ConfirmPopup from './Confirmpopup.jsx'
 import FileAccessPopup from './FileAccessPopup.jsx'
+import FileAccessBanner from './FileAccessBanner.jsx'
 import { FaPen, FaTrash, FaFolder } from "react-icons/fa";
 
 
@@ -22,6 +23,7 @@ function App() {
   const [deletingLink, setDeletingLink] = useState(null);
   const [confirmPopup, setConfirmPopup] = useState(null);
   const [showFileAccessPopup, setShowFileAccessPopup] = useState(true);
+  const [showFileAccessBanner, setShowFileAccessBanner] = useState(false);
 
 const showFlash = (message, type = 'success') => {
     setFlash({ message, type });
@@ -39,17 +41,23 @@ const connectToFile = async () => {
         }],
         multiple: false
       });
-      
+
       setFileHandle(handle);
       setShowFileAccessPopup(false);
+      setShowFileAccessBanner(false);
       const file = await handle.getFile();
       const text = await file.text();
       setData(JSON.parse(text));
-      
+
       showFlash("Fichier connecté avec succès !", "success");
     } catch (err) {
       console.error("Annulation ou erreur:", err);
     }
+  };
+
+  const handleDismissPopup = () => {
+    setShowFileAccessPopup(false);
+    setShowFileAccessBanner(true);
   };
 
 
@@ -184,6 +192,13 @@ const handleDeleteLink = (e, categoryName, indexToDelete) => {
     <>
       <Header />
 
+      {showFileAccessBanner && !fileHandle && (
+        <FileAccessBanner
+          onConnect={connectToFile}
+          onClose={() => setShowFileAccessBanner(false)}
+        />
+      )}
+
       {flash && (
         <FlashMessage message={flash.message} type={flash.type} />
       )}
@@ -279,7 +294,7 @@ const handleDeleteLink = (e, categoryName, indexToDelete) => {
       {showFileAccessPopup && !fileHandle && (
         <FileAccessPopup
           onConnect={connectToFile}
-          onDismiss={() => setShowFileAccessPopup(false)}
+          onDismiss={handleDismissPopup}
         />
       )}
 

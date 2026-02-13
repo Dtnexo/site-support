@@ -1,43 +1,140 @@
-/* Header.css - Style spécifique pour l'en-tête */
+/* ====================================
+   HEADER - Design Classique et Propre
+   ==================================== */
 
-header {
-  background-color: #ffffff;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-bottom: 1px solid #e0e0e0; /* Bordure fine et discrète */
-  margin-bottom: 40px;
+.header {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  border-bottom: 4px solid #0056b3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 100;
 }
 
-header img {
-  height: 70px; /* Taille contrôlée du logo */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.logo {
+  height: 60px;
   width: auto;
-  margin-bottom: 15px;
+  display: block;
   object-fit: contain;
 }
 
-.subtitle {
-  color: #003f87; /* Bleu EPSIC */
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0 0 25px 0;
+/* Brand Info */
+.brand-info {
+  flex: 1;
+  color: #0056b3;
 }
 
-header button {
-  background-color: #003f87;
-  color: #ffffff;
-  border: none;
-  padding: 12px 24px;
-  font-size: 0.95rem;
+.brand-name {
+  margin: 0;
+  font-size: 1.75rem;
   font-weight: 600;
-  border-radius: 4px; /* Arrondi léger (Flat design) */
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
 }
 
-header button:hover {
-  background-color: #002a5c; /* Bleu plus foncé au survol */
+.brand-highlight {
+  color: #0056b3;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.brand-divider {
+  color: rgba(0, 86, 179, 0.4);
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.brand-subtitle {
+  color: rgba(0, 86, 179, 0.95);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.tagline {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.95rem;
+  color: rgba(0, 86, 179, 0.95);
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .header-brand {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .logo-container {
+    align-self: center;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .brand-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    font-size: 1.5rem;
+  }
+
+  .brand-highlight {
+    font-size: 1.75rem;
+  }
+
+  .brand-divider {
+    display: none;
+  }
+
+  .brand-subtitle {
+    font-size: 1rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 1rem;
+  }
+
+  .brand-name {
+    font-size: 1.25rem;
+  }
+
+  .brand-highlight {
+    font-size: 1.5rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .tagline {
+    font-size: 0.85rem;
+  }
 }
