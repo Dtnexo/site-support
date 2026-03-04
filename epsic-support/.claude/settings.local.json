@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install --save-dev electron electron-builder)",
+      "Bash(npm uninstall electron-builder)",
+      "Bash(npm install --save-dev @electron-forge/cli @electron-forge/maker-zip)",
+      "Bash(node -e \"require\\(''@electron-forge/cli''\\)\")",
+      "Bash(npm install --save-dev @yao-pkg/pkg)",
+      "Bash(npx pkg installer/install.js --targets node20-win-x64 --output install.exe)",
+      "Bash(npm install --save-dev innosetup-compiler)",
+      "Bash(npx innosetup-compiler installer/setup.iss)"
+    ]
+  }
+}

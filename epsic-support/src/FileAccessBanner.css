@@ -15,10 +15,27 @@
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
+    opacity: 0;
   }
   to {
     transform: translateY(0);
+    opacity: 1;
   }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+.file-access-banner.closing {
+  animation: slideUp 0.35s ease-in forwards;
 }
 
 .banner-content {
@@ -107,10 +124,6 @@
   font-size: 16px;
 }
 
-/* Ajustement pour le contenu de la page */
-body:has(.file-access-banner) .main-container {
-  margin-top: 60px;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
