@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "electron:dev": "vite build && electron .",
-    "build:all": "vite build && electron-forge package && innosetup-compiler installer/setup.iss"
+    "build:all": "vite build && electron-forge make && innosetup-compiler installer/setup.iss"
   },
   "dependencies": {
     "react": "^19.2.0",

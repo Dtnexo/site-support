@@ -8,7 +8,8 @@
       "Bash(npm install --save-dev @yao-pkg/pkg)",
       "Bash(npx pkg installer/install.js --targets node20-win-x64 --output install.exe)",
       "Bash(npm install --save-dev innosetup-compiler)",
-      "Bash(npx innosetup-compiler installer/setup.iss)"
+      "Bash(npx innosetup-compiler installer/setup.iss)",
+      "Bash(npm run build:all)"
     ]
   }
 }

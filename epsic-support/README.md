@@ -6,16 +6,18 @@ Application de support pour l'administration de l'EPSIC.
 
 ## Installation
 
-1. Télécharge l'installateur :
+1. Télécharge le zip :
 
-   👉 **[Télécharger install.exe](https://github.com/Dtnexo/site-support/releases/latest/download/install.exe)**
+   👉 **[Télécharger EPSIC-Support.zip](https://github.com/Dtnexo/site-support/releases/latest/download/EPSIC%20Support-win32-x64-0.0.0.zip)**
 
-2. Double-clique sur `install.exe` et suis les étapes
+2. Extrais le zip où tu veux (ex: `C:\Program Files` ou `Documents`)
 
-3. Un raccourci est automatiquement créé sur le bureau
+3. Ouvre le dossier extrait et double-clique sur **`Créer raccourci bureau.bat`**
+
+4. Un raccourci **EPSIC Support** apparaît sur ton bureau — c'est prêt !
 
 ---
 
 ## Désinstallation
 
-Panneau de configuration → Programmes → **EPSIC Support** → Désinstaller
+Supprime le dossier extrait et le raccourci du bureau.

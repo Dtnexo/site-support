@@ -16,4 +16,16 @@ module.exports = {
       platforms: ['win32'],
     },
   ],
+  hooks: {
+    postPackage: async (forgeConfig, options) => {
+      const { promises: fs } = require('fs')
+      const path = require('path')
+      for (const outputPath of options.outputPaths) {
+        await fs.copyFile(
+          path.join(__dirname, 'installer/create-shortcut.bat'),
+          path.join(outputPath, 'Créer raccourci bureau.bat')
+        )
+      }
+    },
+  },
 }
