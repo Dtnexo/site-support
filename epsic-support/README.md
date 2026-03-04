@@ -8,7 +8,7 @@ Application de support pour l'administration de l'EPSIC.
 
 1. Télécharge le zip :
 
-   👉 **[Télécharger EPSIC-Support.zip](https://github.com/Dtnexo/site-support/releases/latest/download/EPSIC%20Support-win32-x64-0.0.0.zip)**
+   👉 **[Télécharger EPSIC-Support.zip](https://github.com/Dtnexo/site-support/releases/latest/download/EPSIC.Support-win32-x64-0.0.0.zip)**
 
 2. Extrais le zip où tu veux (ex: `C:\Program Files` ou `Documents`)
 
