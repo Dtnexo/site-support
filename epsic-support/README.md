@@ -12,7 +12,7 @@ Application de support pour l'administration de l'EPSIC.
 
 2. Extrais le zip où tu veux (ex: `C:\Program Files` ou `Documents`)
 
-3. Ouvre le dossier extrait et double-clique sur **`Créer raccourci bureau.bat`**
+3. Ouvre le dossier extrait et double-clique sur **`Créer raccourci bureau.cmd`**
 
 4. Un raccourci **EPSIC Support** apparaît sur ton bureau — c'est prêt !
 

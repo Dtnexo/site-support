@@ -22,8 +22,8 @@ module.exports = {
       const path = require('path')
       for (const outputPath of options.outputPaths) {
         await fs.copyFile(
-          path.join(__dirname, 'installer/create-shortcut.bat'),
-          path.join(outputPath, 'Créer raccourci bureau.bat')
+          path.join(__dirname, 'installer/create-shortcut.cmd'),
+          path.join(outputPath, 'Créer raccourci bureau.cmd')
         )
       }
     },
